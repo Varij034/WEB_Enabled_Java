@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Campus Event Registration</title>
+</head>
+<body>
+
+    <h2>Technical Workshop Registration</h2>
+
+    <form action="EventRegistrationServlet" method="post">
+        
+        <label for="name">Student Name:</label><br>
+        <input type="text" id="name" name="studentName" required><br><br>
+
+        <label for="roll">Roll Number:</label><br>
+        <input type="text" id="roll" name="rollNo" required><br><br>
+
+        <label for="dept">Department:</label><br>
+        <input type="text" id="dept" name="department" required><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="studentEmail" required><br><br>
+
+        <input type="submit" value="Register Now">
+
+    </form>
+
+</body>
+</html>
