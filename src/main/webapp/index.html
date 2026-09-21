@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Result Portal</title>
+</head>
+<body>
+
+    <h2>Student Result Portal</h2>
+
+    <form action="StudentServlet" method="post">
+        <label for="name">Student Name:</label><br>
+        <input type="text" id="name" name="studentName" required><br><br>
+
+        <label for="roll">Roll Number:</label><br>
+        <input type="text" id="roll" name="rollNo" required><br><br>
+
+        <label for="m1">Subject 1 Marks:</label><br>
+        <input type="number" id="m1" name="marks1" min="0" max="100" required><br><br>
+
+        <label for="m2">Subject 2 Marks:</label><br>
+        <input type="number" id="m2" name="marks2" min="0" max="100" required><br><br>
+
+        <label for="m3">Subject 3 Marks:</label><br>
+        <input type="number" id="m3" name="marks3" min="0" max="100" required><br><br>
+
+        <input type="submit" value="Submit & Calculate Result">
+    </form>
+
+</body>
+</html>
