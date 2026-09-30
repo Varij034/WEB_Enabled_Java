@@ -19,13 +19,11 @@ public class EventRegistrationServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        // 1. Extract request parameters
         String name = request.getParameter("studentName");
         String roll = request.getParameter("rollNo");
         String dept = request.getParameter("department");
         String email = request.getParameter("studentEmail");
 
-        // 2. Server-side Validation
         if (name == null || name.trim().isEmpty() || 
             roll == null || roll.trim().isEmpty() || 
             dept == null || dept.trim().isEmpty() || 
@@ -33,13 +31,11 @@ public class EventRegistrationServlet extends HttpServlet {
 
             out.println("<h3 style='color:red;'>Validation Error: All fields are required!</h3>");
             
-            // Forward back to the registration form using RequestDispatcher
             RequestDispatcher rd = request.getRequestDispatcher("event_register.html");
             rd.include(request, response);
             return;
         }
 
-        // 3. Display Confirmation Page upon successful validation
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head><title>Registration Confirmation</title></head>");
